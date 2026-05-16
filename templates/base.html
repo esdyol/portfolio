@@ -1,0 +1,133 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Freddy Ewinsou — Développeur Full-Stack Django &amp; React | Freelance</title>
+  <meta name="description" content="Développeur Full-Stack freelance spécialisé Django &amp; React. Je conçois des APIs robustes, des interfaces React modernes et des applications web complètes. Basé à Cotonou, Bénin.">
+
+  <!-- Open Graph / Social sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Freddy Ewinsou — Développeur Full-Stack Django &amp; React">
+  <meta property="og:description" content="Développeur Full-Stack freelance — APIs Django robustes et interfaces React modernes. Disponible pour vos projets.">
+  <meta property="og:locale" content="fr_FR">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Freddy Ewinsou — Développeur Full-Stack Django &amp; React">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- REMIX ICON -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet">
+
+  <!-- SEO Avancé : Données Structurées -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Freddy Ewinsou",
+    "jobTitle": "Développeur Full-Stack Django & React",
+    "url": "{{ site_url }}",
+    "sameAs": [
+      {% for link in social_links %}
+        "{{ link.url }}"{% if not forloop.last %},{% endif %}
+      {% endfor %}
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <header id="header">
+    <nav>
+      <a href="#hero" class="logo" aria-label="Freddy Ewinsou — Accueil">FE.</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul id="navMenu">
+        <li><a href="#hero" class="nav-link">Accueil</a></li>
+        <li><a href="#about" class="nav-link">À propos</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#competences" class="nav-link">Compétences</a></li>
+        <li><a href="#projets" class="nav-link">Projets</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero visible" id="hero">
+      <div class="container hero-content">
+        <div class="hero-text">
+          <div class="tagline hero-anim" style="--anim-order: 1">👋 Bonjour, je suis</div>
+          <h1 class="hero-anim" style="--anim-order: 2">Freddy Ewinsou</h1>
+          <p class="hero-anim" style="--anim-order: 3">
+            Je conçois et livre des applications web complètes de A à Z — APIs robustes avec <strong>Django</strong>,
+            interfaces modernes avec <strong>React</strong>. Disponible pour vos projets freelance.
+          </p>
+          <div class="hero-actions hero-anim" style="--anim-order: 4">
+            <a href="#contact" class="btn btn-primary">
+              <i class="ri-chat-3-line"></i> Me contacter
+            </a>
+          </div>
+        </div>
+
+        <div class="profile-card hero-anim" style="--anim-order: 5">
+          <div class="profile-card-content">
+            {% with img_path=profile_image %}
+              <img src="{% static img_path %}" alt="Portrait professionnel de Freddy Ewinsou" width="160" height="160" loading="eager">
+            {% endwith %}
+            <h3>Freddy Ewinsou</h3>
+            <div class="role">Full-Stack Developer · Freelance</div>
+            <div class="social-links">
+              {% for link in social_links %}
+                <a href="{{ link.url }}" title="{{ link.label }}" target="_blank" rel="noopener noreferrer" aria-label="Visiter mon profil {{ link.label }}">
+                  <i class="{{ link.icon }}"></i>
+                </a>
+              {% empty %}
+                <span class="social-placeholder">Profils à renseigner</span>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    {% include "about.html"%}
+    {% include "services.html" %}
+    {% include "competence.html" %}
+    {% include "project.html" %}
+    {% include "contact.html" %}
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        {% if social_links %}
+        <div class="footer-social">
+          {% for link in social_links %}
+            <a href="{{ link.url }}" title="{{ link.label }}" target="_blank" rel="noopener noreferrer" aria-label="Visiter mon profil {{ link.label }}">
+              <i class="{{ link.icon }}"></i>
+            </a>
+          {% endfor %}
+        </div>
+        {% endif %}
+        <p>© 2026 Freddy Ewinsou — Développeur Full-Stack Django & React</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>

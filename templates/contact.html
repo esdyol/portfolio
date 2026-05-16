@@ -1,0 +1,33 @@
+<section id="contact">
+    <div class="container">
+        <h2>Contactez-moi</h2>
+        <div class="contact-box">
+          <p>Un projet, une mission freelance ou une collaboration ? Je serais ravi d'échanger avec vous !</p>
+          {% if messages %}
+            <div class="form-feedback">
+              {% for message in messages %}
+                <p class="alert alert-{{ message.tags }}">{{ message }}</p>
+              {% endfor %}
+            </div>
+          {% endif %}
+          <form id="contactForm" method="post" action="#contact" novalidate>
+            {% csrf_token %}
+            <label for="id_name" class="sr-only">Votre nom</label>
+            {{ form.name }}
+            {% if form.name.errors %}<p class="field-error" role="alert">{{ form.name.errors.0 }}</p>{% endif %}
+            <label for="id_email" class="sr-only">Votre email</label>
+            {{ form.email }}
+            {% if form.email.errors %}<p class="field-error" role="alert">{{ form.email.errors.0 }}</p>{% endif %}
+            <label for="id_subject" class="sr-only">Votre sujet</label>
+            {{ form.subject }}
+            {% if form.subject.errors %}<p class="field-error" role="alert">{{ form.subject.errors.0 }}</p>{% endif %}
+            <label for="id_message" class="sr-only">Votre message</label>
+            {{ form.message }}
+            {% if form.message.errors %}<p class="field-error" role="alert">{{ form.message.errors.0 }}</p>{% endif %}
+            <button type="submit" class="btn btn-primary">
+              <i class="ri-send-plane-fill"></i> Envoyer le message
+            </button>
+          </form>
+        </div>
+    </div>
+</section>
