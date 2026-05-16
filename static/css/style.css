@@ -1,12 +1,12 @@
 :root {
-  --bg: #0f172a;
-  --bg-soft: #1e293b;
+  --bg: #04110e;
+  --bg-soft: #0d211b;
   --text: #e5e7eb;
-  --text-soft: #94a3b8;
-  --accent: #38bdf8;
-  --accent-dark: #0284c7;
+  --text-soft: #8faea6;
+  --accent: #10b981;
+  --accent-dark: #059669;
   --card-bg: rgba(255,255,255,0.03);
-  --border: #334155;
+  --border: #1a3b32;
 }
 
 /* Visually hidden — accessible to screen readers */
@@ -34,7 +34,7 @@ html {
 
 body {
   font-family: 'Inter', sans-serif;
-  background: linear-gradient(180deg, #0f172a 0%, #020617 100%);
+  background: linear-gradient(180deg, #04110e 0%, #010605 100%);
   color: var(--text);
   line-height: 1.7;
   overflow-x: hidden;
@@ -53,7 +53,7 @@ h1, h2, h3, h4 {
   left: 0;
   width: 0%;
   height: 3px;
-  background: linear-gradient(90deg, var(--accent), #06b6d4);
+  background: linear-gradient(90deg, var(--accent), #34d399);
   z-index: 1000;
   transition: width 0.1s ease;
 }
@@ -64,7 +64,7 @@ header {
   top: 0;
   width: 100%;
   padding: 1rem 0;
-  background: rgba(15, 23, 42, 0.8);
+  background: rgba(4, 17, 14, 0.8);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
   z-index: 999;
@@ -90,7 +90,7 @@ nav {
   font-size: 1.4rem;
   font-weight: 700;
   letter-spacing: -0.03em;
-  background: linear-gradient(135deg, var(--accent), #06b6d4);
+  background: linear-gradient(135deg, var(--accent), #34d399);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -169,7 +169,7 @@ h2::after {
   transform: translateX(-50%);
   width: 80px;
   height: 4px;
-  background: linear-gradient(90deg, var(--accent), #06b6d4);
+  background: linear-gradient(90deg, var(--accent), #34d399);
   border-radius: 2px;
 }
 
@@ -253,14 +253,14 @@ h2::after {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--accent), #06b6d4);
+  background: linear-gradient(135deg, var(--accent), #34d399);
   color: #020617;
-  box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
 }
 
 .btn-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(56, 189, 248, 0.4);
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
 }
 
 .btn-secondary {
@@ -271,7 +271,7 @@ h2::after {
 
 .btn-secondary:hover {
   border-color: var(--accent);
-  background: rgba(56, 189, 248, 0.1);
+  background: rgba(16, 185, 129, 0.1);
   transform: translateY(-3px);
 }
 
@@ -297,7 +297,7 @@ h2::after {
   right: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(56, 189, 248, 0.1), transparent 70%);
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.1), transparent 70%);
   animation: rotate 20s linear infinite;
 }
 
@@ -318,7 +318,7 @@ h2::after {
   object-fit: cover;
   margin-bottom: 1.5rem;
   border: 4px solid var(--accent);
-  box-shadow: 0 8px 30px rgba(56, 189, 248, 0.3);
+  box-shadow: 0 8px 30px rgba(16, 185, 129, 0.3);
 }
 
 .profile-card h3 {
@@ -400,7 +400,7 @@ h2::after {
 
 .skill-item:hover {
   transform: translateX(10px);
-  background: rgba(56, 189, 248, 0.1);
+  background: rgba(16, 185, 129, 0.1);
 }
 
 .skill-item h4 {
@@ -438,7 +438,7 @@ h2::after {
   left: 0;
   width: 100%;
   height: 4px;
-  background: linear-gradient(90deg, var(--accent), #06b6d4);
+  background: linear-gradient(90deg, var(--accent), #34d399);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.4s ease;
@@ -457,7 +457,7 @@ h2::after {
 .card-icon {
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(6, 182, 212, 0.2));
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(52, 211, 153, 0.2));
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -509,7 +509,7 @@ h2::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(56, 189, 248, 0.1), transparent);
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), transparent);
 }
 
 .project-image img {
@@ -549,8 +549,8 @@ h2::after {
 .tech-tag {
   font-family: 'Space Grotesk', 'Inter', sans-serif;
   padding: 0.4rem 0.9rem;
-  background: rgba(56, 189, 248, 0.1);
-  border: 1px solid rgba(56, 189, 248, 0.3);
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.3);
   border-radius: 20px;
   font-size: 0.85rem;
   color: var(--accent);
@@ -658,7 +658,7 @@ button.btn {
 input:focus, textarea:focus {
   outline: none;
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.1);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
 }
 
 textarea {
@@ -806,7 +806,7 @@ footer p {
     width: min(75vw, 320px);
     height: 100vh;
     height: 100dvh;
-    background: rgba(15, 23, 42, 0.97);
+    background: rgba(4, 17, 14, 0.97);
     backdrop-filter: blur(20px);
     flex-direction: column;
     align-items: center;
