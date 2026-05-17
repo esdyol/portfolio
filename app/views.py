@@ -28,6 +28,11 @@ def build_social_links():
             "url": settings.PORTFOLIO_TWITTER_URL,
         },
         {
+            "label": "WhatsApp",
+            "icon": "ri-whatsapp-line",
+            "url": settings.PORTFOLIO_WHATSAPP_URL,
+        },
+        {
             "label": "Fiverr",
             "icon": "ri-briefcase-4-fill",
             "url": settings.PORTFOLIO_FIVERR_URL,
