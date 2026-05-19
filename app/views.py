@@ -88,6 +88,7 @@ def build_projects():
             "tags": ["Django", "PostgreSQL", "Google OAuth", "Render", "Bootstrap"],
             "links": [
                 {"label": "GitHub", "icon": "ri-github-fill", "url": "https://github.com/esdyol/"},
+                {"label": "Voir le site", "icon": "ri-external-link-line", "url": "https://restaurant-hebergeur.onrender.com"},
             ],
         },
         {
