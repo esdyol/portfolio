@@ -49,15 +49,43 @@ def build_social_links():
 def build_projects():
     return [
         {
+            "emoji": "📄",
+            "image": "",
+            "title": "SaaS Gestion de Factures (IA/OCR)",
+            "description": (
+                "Plateforme SaaS de traitement de factures. Extraction de données par OCR, "
+                "gestion des abonnements via Stripe (Webhooks), architecture Docker et "
+                "dashboard dynamique avec React Router."
+            ),
+            "tags": ["React", "Django", "Docker", "Stripe", "PostgreSQL"],
+            "links": [
+                {"label": "GitHub", "icon": "ri-github-fill", "url": "https://github.com/esdyol/"},
+            ],
+        },
+        {
+            "emoji": "✅",
+            "image": "",
+            "title": "TaskFlow - Outil de Productivité",
+            "description": (
+                "Application de gestion de tâches professionnelle (priorités, catégories, "
+                "échéances) dotée d'une interface utilisateur moderne (Glassmorphism) et "
+                "interactive."
+            ),
+            "tags": ["Django", "JavaScript", "UI/UX", "SQLite"],
+            "links": [
+                {"label": "GitHub", "icon": "ri-github-fill", "url": "https://github.com/esdyol/"},
+            ],
+        },
+        {
             "emoji": "🍽️",
             "image": "",
             "title": "Plateforme Multi-Restaurants",
             "description": (
-                "Application web complète permettant la gestion de plusieurs "
-                "restaurants avec système de réservations en ligne et tableau "
-                "de bord administrateur."
+                "Application web en production pour la gestion de restaurants avec "
+                "réservations, authentification Google OAuth et dashboard admin. "
+                "Déployée sur Render."
             ),
-            "tags": ["Django", "MySQL", "REST API", "Bootstrap"],
+            "tags": ["Django", "PostgreSQL", "Google OAuth", "Render", "Bootstrap"],
             "links": [
                 {"label": "GitHub", "icon": "ri-github-fill", "url": "https://github.com/esdyol/"},
             ],
