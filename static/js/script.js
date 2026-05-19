@@ -125,3 +125,34 @@ if (navToggle && navMenu) {
     }
   });
 }
+
+// ===== Theme Toggle (Dark/Light Mode) =====
+const themeToggle = document.getElementById('themeToggle');
+const themeIcon = document.getElementById('themeIcon');
+
+if (themeToggle && themeIcon) {
+  // Check local storage for preference
+  const currentTheme = localStorage.getItem('portfolioTheme') || 'dark';
+  
+  if (currentTheme === 'light') {
+    document.documentElement.setAttribute('data-theme', 'light');
+    themeIcon.classList.remove('ri-moon-line');
+    themeIcon.classList.add('ri-sun-line');
+  }
+
+  themeToggle.addEventListener('click', () => {
+    let theme = document.documentElement.getAttribute('data-theme');
+    
+    if (theme === 'light') {
+      document.documentElement.removeAttribute('data-theme');
+      localStorage.setItem('portfolioTheme', 'dark');
+      themeIcon.classList.remove('ri-sun-line');
+      themeIcon.classList.add('ri-moon-line');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+      localStorage.setItem('portfolioTheme', 'light');
+      themeIcon.classList.remove('ri-moon-line');
+      themeIcon.classList.add('ri-sun-line');
+    }
+  });
+}
