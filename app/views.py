@@ -50,7 +50,7 @@ def build_projects():
     return [
         {
             "emoji": "📄",
-            "image": "",
+            "image": "images/Photo_facture.png",
             "title": "SaaS Gestion de Factures (IA/OCR)",
             "description": (
                 "Plateforme SaaS de traitement de factures. Extraction de données par OCR, "
@@ -64,7 +64,7 @@ def build_projects():
         },
         {
             "emoji": "✅",
-            "image": "",
+            "image": "images/photo_task.png",
             "title": "TaskFlow - Outil de Productivité",
             "description": (
                 "Application de gestion de tâches professionnelle (priorités, catégories, "
@@ -78,7 +78,7 @@ def build_projects():
         },
         {
             "emoji": "🍽️",
-            "image": "",
+            "image": "images/photo_restaurant.png",
             "title": "Plateforme Multi-Restaurants",
             "description": (
                 "Application web en production pour la gestion de restaurants avec "
