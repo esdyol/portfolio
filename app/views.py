@@ -60,6 +60,7 @@ def build_projects():
             "tags": ["React", "Django", "Docker", "Stripe", "PostgreSQL"],
             "links": [
                 {"label": "GitHub", "icon": "ri-github-fill", "url": "https://github.com/esdyol/"},
+                {"label": "Voir le site", "icon": "ri-external-link-line", "url": "https://gestion-des-factures-seven.vercel.app/"},
             ],
         },
         {
